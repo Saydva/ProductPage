@@ -1,58 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
   const section = document.getElementById('getting-started');
+  if (!section) return;
 
-  // Error handling
-  if (!section) {
-    console.warn('Getting started section not found');
-    return;
-  }
-
-  let isAnimating = false;
+  const isMobile = window.innerWidth <= 700;
+  let hasAnimated = false;
 
   function triggerAnimation() {
-    if (isAnimating) return;
-
-    isAnimating = true;
-
-    // Odstráňme starú animáciu
+    if (hasAnimated) return;
     section.classList.remove('animate-steps');
-
-    // Restart animácie po krátkom oneskorení
     setTimeout(() => {
       section.classList.add('animate-steps');
-
-      // Reset flag po dokončení animácie
-      setTimeout(() => {
-        isAnimating = false;
-      }, 1000); // Čas trvania animácie
+      hasAnimated = true;
     }, 50);
   }
 
   function checkIfInView() {
+    if (isMobile) return; // na mobile animáciu nikdy nespúšťame
     const rect = section.getBoundingClientRect();
     const isVisible =
       rect.top < window.innerHeight * 0.8 &&
       rect.bottom > window.innerHeight * 0.2;
-
     if (isVisible) {
       triggerAnimation();
     }
   }
 
-  // Single event listener for both scroll and hash change
   function handleVisibilityCheck() {
-    // Check if navigated directly to section
+    if (isMobile) return;
     if (window.location.hash === '#getting-started') {
-      setTimeout(triggerAnimation, 800); // Krátke oneskorenie pre smooth scroll
+      setTimeout(triggerAnimation, 800);
     } else {
       checkIfInView();
     }
   }
 
-  // Event listeners
-  window.addEventListener('scroll', checkIfInView, { passive: true });
-  window.addEventListener('hashchange', handleVisibilityCheck);
-
-  // Initial check
-  handleVisibilityCheck();
+  if (!isMobile) {
+    window.addEventListener('scroll', checkIfInView, { passive: true });
+    window.addEventListener('hashchange', handleVisibilityCheck);
+    handleVisibilityCheck();
+  }
 });

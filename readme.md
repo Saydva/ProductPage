@@ -200,3 +200,7 @@ $large: 1200px;
 ---
 
 **This project showcases modern web development practices with a focus on maintainable code, responsive design, and optimal user experience.**
+
+### Mobile-friendly steps
+
+On small screens, the "Getting Started" steps section transforms into a swipeable slider for better usability.

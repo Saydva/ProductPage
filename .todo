@@ -3,7 +3,7 @@
 - Skontroluj a doplň všetky SCSS premenné. @done
 - Zjednoť CSS selektory, odstráň duplicity. @done
 - V JS používaj len jeden DOMContentLoaded event na súbor. @done
-- Pridaj accessibility a meta tagy.
-- Skontroluj nastavenie GitHub Pages.
-- Pridaj favicon.
-- Skontroluj dependencies v package.json.
+- Pridaj accessibility a meta tagy. @done
+- Skontroluj nastavenie GitHub Pages. @done
+- Pridaj favicon. @done
+- Skontroluj dependencies v package.json. @done

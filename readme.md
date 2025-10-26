@@ -18,13 +18,13 @@ _Scan the QR code with your phone for instant access to the website_
 
 ## 🛠️ Technologies Used
 
-- **HTML5** - Semantic markup with modern web standards
-- **SASS/SCSS** - CSS preprocessor for maintainable stylesheets
-- **JavaScript (ES6+)** - Modern JavaScript with modules and event handling
-- **Vite** - Fast build tool and development server
-- **CSS Grid & Flexbox** - Modern layout systems for responsive design
-- **GitHub Actions** - Automated CI/CD pipeline for deployment
-- **GitHub Pages** - Static site hosting
+- **HTML5** – Semantic markup with modern web standards
+- **SASS/SCSS** – CSS preprocessor for maintainable stylesheets (`@use` syntax, no deprecated `@import`)
+- **JavaScript (ES6+)** – Modern JavaScript with modules and event handling (jeden `DOMContentLoaded` event na súbor)
+- **Vite** – Fast build tool and development server (`base` nastavený na `/ProductPage/`)
+- **CSS Grid & Flexbox** – Modern layout systems for responsive design
+- **GitHub Actions** – Automated CI/CD pipeline for deployment
+- **GitHub Pages** – Static site hosting
 
 ## 📦 Installation and Setup
 
@@ -61,17 +61,18 @@ ProductPage/
 ├── public/
 │   ├── .nojekyll           # Disable Jekyll processing
 │   └── assets/             # Static assets
+│   └── qr-code.png         # QR code for quick access
 ├── src/
-│   ├── styles/             # SCSS stylesheets
-│   │   ├── base/           # Foundation styles
+│   ├── styles/
+│   │   ├── base/
 │   │   │   ├── reset.scss
 │   │   │   ├── typography.scss
 │   │   │   └── variables.scss
-│   │   ├── layout/         # Layout components
+│   │   ├── layout/
 │   │   │   ├── grid.scss
 │   │   │   ├── container.scss
 │   │   │   └── sections.scss
-│   │   ├── components/     # UI components
+│   │   ├── components/
 │   │   │   ├── buttons.scss
 │   │   │   ├── cards.scss
 │   │   │   ├── hero.scss
@@ -79,11 +80,11 @@ ProductPage/
 │   │   │   ├── firms-table.scss
 │   │   │   ├── contact.scss
 │   │   │   └── steps.scss
-│   │   ├── utils/          # Utility styles
+│   │   ├── utils/
 │   │   │   ├── responsive.scss
 │   │   │   └── extra-scroll-padding.scss
-│   │   └── main.scss       # Main stylesheet entry point
-│   └── js/                 # JavaScript modules
+│   │   └── main.scss       # Main stylesheet entry point (používa len @use)
+│   └── js/
 │       ├── javascriptUtils.js
 │       ├── main-menu.js
 │       ├── cards-highlight.js
@@ -92,73 +93,30 @@ ProductPage/
 │       └── hero-animation.js
 ├── dist/                   # Build output (generated)
 ├── index.html              # Main HTML file
-├── vite.config.js          # Vite configuration
+├── vite.config.js          # Vite configuration (base nastavený na /ProductPage/)
 ├── package.json            # Project dependencies
 └── README.md               # Project documentation
 ```
 
 ## 🎨 SCSS Architecture
 
-### Base Layer
-
-- **`reset.scss`** - CSS reset and normalize styles
-- **`typography.scss`** - Font definitions and text styling
-- **`variables.scss`** - Color palette, spacing, breakpoints, and other design tokens
-
-### Layout Layer
-
-- **`grid.scss`** - CSS Grid system for complex layouts
-- **`container.scss`** - Container and wrapper styles
-- **`sections.scss`** - Section spacing and structure
-
-### Components Layer
-
-- **`buttons.scss`** - Button variants and states
-- **`cards.scss`** - Card components with hover effects
-- **`hero.scss`** - Hero section styling with animations
-- **`main-menu.scss`** - Navigation and mobile menu
-- **`firms-table.scss`** - Responsive table styles
-- **`contact.scss`** - Contact section and forms
-- **`steps.scss`** - Step-by-step process styling
-
-### Utilities Layer
-
-- **`responsive.scss`** - Responsive utility classes
-- **`extra-scroll-padding.scss`** - Scroll behavior enhancements
-
-### SCSS Features Used
-
-- **Variables** - Consistent color scheme and spacing
-- **Nesting** - Organized and readable selectors
-- **Mixins** - Reusable style patterns
-- **Functions** - Dynamic color calculations
-- **Partials** - Modular stylesheet organization
-- **Import/Use** - Modern SCSS module system
+- **Používaš len `@use` (žiadne deprecated `@import`)**
+- **Premenné, mixiny, funkcie, partials** – všetko modularizované
+- **Mobile override** – na malé zariadenia sú kroky v sekcii steps vždy viditeľné (`opacity: 1 !important`)
+- **Animácie len cez triedu na rodičovi**
 
 ## 🚀 Features
 
-### Design & UX
-
-- **Responsive Design** - Mobile-first approach with fluid layouts
-- **Modern UI/UX** - Clean, professional interface
-- **Smooth Animations** - CSS transitions and JavaScript animations
-- **Interactive Elements** - Hover effects and micro-interactions
-
-### Technical Features
-
-- **Component-Based Architecture** - Modular SCSS and JS structure
-- **Mobile Navigation** - Hamburger menu for screens ≤ 900px
-- **Animated Logo** - Dynamic Ribbon logo animation
-- **Card Highlights** - Interactive card hover effects
-- **Scroll Animations** - Elements animate on scroll
-- **Cross-Browser Compatibility** - Tested across modern browsers
-
-### Performance
-
-- **Optimized Build** - Vite bundling with code splitting
-- **Compressed Assets** - Minified CSS and JavaScript
-- **Modern Web Standards** - ES6+ modules and semantic HTML
-- **Fast Loading** - Optimized images and efficient code
+- **Responsive Design** – Mobile-first approach
+- **Modern UI/UX** – Clean, professional interface
+- **Smooth Animations** – CSS transitions and JavaScript animations
+- **Interactive Elements** – Hover effects and micro-interactions
+- **Component-Based Architecture** – Modular SCSS and JS structure
+- **Mobile Navigation** – Hamburger menu for screens ≤ 900px
+- **Animated Logo** – Dynamic Ribbon logo animation
+- **Card Highlights** – Interactive card hover effects
+- **Scroll Animations** – Elements animate on scroll (desktop/tablet)
+- **Cross-Browser Compatibility** – Tested across modern browsers
 
 ## 🚀 Deployment
 
@@ -190,12 +148,12 @@ $large: 1200px;
 
 ## 🎯 Key Sections
 
-- **Hero Section** - Main value proposition with call-to-action
-- **Features** - Why choose Ribbon benefits
-- **Use Cases** - Industry-specific examples
-- **Payment Methods** - Supported payment options
-- **Getting Started** - Step-by-step process
-- **Contact** - Contact information and form
+- **Hero Section** – Main value proposition with call-to-action
+- **Features** – Why choose Ribbon benefits
+- **Use Cases** – Industry-specific examples
+- **Payment Methods** – Supported payment options
+- **Getting Started** – Step-by-step process (slider on mobile, animated on desktop)
+- **Contact** – Contact information and form
 
 ---
 
@@ -203,4 +161,4 @@ $large: 1200px;
 
 ### Mobile-friendly steps
 
-On small screens, the "Getting Started" steps section transforms into a swipeable slider for better usability.
+On small screens, the "Getting Started" steps section is always visible and transforms into a swipeable slider for better usability. Animácie sa na mobile nevykonávajú, kroky sú vždy viditeľné.

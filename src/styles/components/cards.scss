@@ -1,0 +1,236 @@
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Globálne karty */
+.card {
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid $border-color;
+  background: $bg-light;
+  color: $text-dark;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: $text-dark;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 12px;
+      color: $text-medium;
+      padding-left: $spacing-sm;
+      position: relative;
+      transition:
+        font-size 0.3s,
+        color 0.3s;
+
+      &::before {
+        // content: '✓';
+        position: absolute;
+        left: 0;
+        color: $success-color;
+        font-weight: bold;
+      }
+
+      &.active {
+        font-size: 1.25rem;
+        color: $primary-color;
+        font-weight: 700;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+/* Špecifické karty v sekcii Platobné metódy */
+#pricing .card {
+  border-radius: 0;
+  padding: 0 32px;
+  box-shadow: none;
+  border: none;
+  background: rgba($bg-light, 0.85);
+  color: $text-dark;
+  font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-style: italic;
+
+  h3 {
+    font-size: 1.3rem;
+    color: $primary-color;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}
+
+/* Step Cards */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step-card {
+  @include card-base;
+  padding: 25px 20px;
+  text-align: center;
+  border-radius: 12px;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 15px auto;
+}
+
+.step-card {
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: $text-dark;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-medium;
+    margin: 0;
+  }
+}
+
+#pricing {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 55%,
+    $success-color 100%
+  );
+  padding: 80px 0 80px 0;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba($primary-color, 0.18);
+  overflow: hidden;
+
+  // Horný šikmý okraj
+  &::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 55%,
+      $success-color 100%
+    );
+    transform: skewY(-6deg);
+    z-index: 1;
+  }
+
+  // Dolný šikmý okraj
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 55%,
+      $success-color 100%
+    );
+    transform: skewY(6deg);
+    z-index: 1;
+  }
+
+  // Obsah nad pseudo-elementmi
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .card {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: $text-light;
+    text-align: left;
+    padding: 0 32px;
+
+    h3 {
+      font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 1.5rem;
+      color: $text-dark;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 16px rgba($secondary-color, 0.35);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: $text-dark;
+        text-transform: uppercase;
+        font-style: italic;
+        margin-bottom: 14px;
+        text-shadow: 0 2px 12px rgba($primary-color, 0.25);
+        background: none;
+        padding-left: 0;
+      }
+    }
+  }
+}

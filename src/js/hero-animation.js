@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (letters.length === 0) return;
 
+  // Ensure parent has 'animated' class so CSS shows spans
+  heroTitle.classList.add('animated');
+
   // Animate letters on load
   letters.forEach((letter, index) => {
     setTimeout(

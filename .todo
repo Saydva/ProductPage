@@ -1,0 +1,9 @@
+- Uisti sa, že po build-e je v index.html. @done
+- Nastav base vo Vite, ak deployuješ do podpriečinka. @done
+- Skontroluj a doplň všetky SCSS premenné. @done
+- Zjednoť CSS selektory, odstráň duplicity. @done
+- V JS používaj len jeden DOMContentLoaded event na súbor. @done
+- Pridaj accessibility a meta tagy.
+- Skontroluj nastavenie GitHub Pages.
+- Pridaj favicon.
+- Skontroluj dependencies v package.json.

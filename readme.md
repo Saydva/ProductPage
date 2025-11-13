@@ -19,7 +19,7 @@ _Scan the QR code with your phone for instant access._
 ## 🛠️ Technologies Used
 
 - **HTML5** – Semantic markup
-- **SASS/SCSS** – Modular stylesheets (`@use` syntax, no deprecated `@import`)
+- **SASS/SCSS** – Modular stylesheets (using `@import` for compatibility)
 - **JavaScript (ES6+)** – Modern JS, one `DOMContentLoaded` event per file
 - **Vite** – Fast build tool (`base` set to `/ProductPage/`)
 - **CSS Grid & Flexbox** – Responsive layouts
@@ -49,16 +49,39 @@ ProductPage/
 ├── src/
 │   ├── styles/
 │   │   ├── base/
+│   │   │   ├── variables.scss
+│   │   │   ├── mixins.scss
+│   │   │   ├── reset.scss
+│   │   │   ├── typography.scss
+│   │   │   └── opacity.scss
 │   │   ├── layout/
+│   │   │   ├── container.scss
+│   │   │   ├── grid.scss
+│   │   │   └── sections.scss
 │   │   ├── components/
+│   │   │   ├── hero.scss
+│   │   │   ├── buttons.scss
+│   │   │   ├── cards.scss
+│   │   │   ├── steps.scss
+│   │   │   ├── main-menu.scss
+│   │   │   ├── firms-table.scss
+│   │   │   └── contact.scss
 │   │   ├── utils/
+│   │   │   ├── responsive.scss
+│   │   │   └── extra-scroll-padding.scss
 │   │   └── main.scss
 │   └── js/
-│       └── steps-animation.js
-├── dist/
+│       ├── main-menu.js
+│       ├── cards-highlight.js
+│       ├── ribbon-logo-animate.js
+│       ├── steps-animation.js
+│       └── hero-animation.js
 ├── index.html
 ├── vite.config.js
 ├── package.json
+├── package-lock.json
+├── .gitignore
+├── .todo
 └── README.md
 ```
 
@@ -68,7 +91,7 @@ ProductPage/
 
 - Only `@use` imports (no deprecated `@import`)
 - Variables, mixins, functions modularized
-- Mobile override: steps always visible (`opacity: 1 !important`)
+- Mobile-friendly: steps always visible, no animation on mobile
 - Animations only via parent class
 
 ---

@@ -1,0 +1,13 @@
+.card-bg-card {
+  background-image: url('/assets/card-bg.png'); // cesta k obrázku platobnej karty
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 120px auto;
+}
+
+.card-bg-mobile {
+  background-image: url('/assets/mobile-bg.png'); // cesta k obrázku mobilu
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 110px auto;
+}

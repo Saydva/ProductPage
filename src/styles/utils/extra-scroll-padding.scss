@@ -1,0 +1,11 @@
+@import '../base/variables';
+
+.section,
+.hero,
+.firms-table {
+  scroll-margin-top: $spacing-xl; // výška menu + medzera
+}
+
+#getting-started {
+  scroll-margin-top: 9rem; // výška menu
+}

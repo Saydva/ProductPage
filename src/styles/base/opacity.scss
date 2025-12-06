@@ -1,0 +1,17 @@
+@import '../base/variables';
+
+// Karty
+.card {
+  background: rgba($bg-light, 0.7); // polopriehľadné biele
+  box-shadow: 0 2px 12px rgba($primary-color, 0.07);
+}
+
+.section .step-card {
+  background: rgba($bg-light, 0.2); // polopriehľadné biele
+}
+
+// Formulár
+.contact-form input,
+.contact-form textarea {
+  background: rgba($bg-light, 0.7); // polopriehľadné biele
+}

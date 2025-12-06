@@ -1,0 +1,96 @@
+@import '../base/variables';
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: flex;
+  gap: $spacing-lg;
+  flex-wrap: wrap;
+  background: rgba($bg-light, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba($primary-color, 0.07);
+  padding: $spacing-md;
+}
+
+.contact-info {
+  flex: 1 1 250px;
+  font-size: 1.1rem;
+  color: $secondary-color;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    margin-bottom: $spacing-sm;
+  }
+}
+
+.contact-form {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  input,
+  textarea {
+    padding: $spacing-sm $spacing-md;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba($bg-light, 0.8);
+    resize: vertical;
+    color: $text-dark;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: $secondary-color;
+    background: $bg-light;
+  }
+
+  button.btn {
+    align-self: flex-end;
+    background: $secondary-color;
+    color: #fff;
+    border: none;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    &:hover {
+      background: $primary-color;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-grid {
+    flex-direction: column;
+    gap: $spacing-sm;
+    padding: $spacing-sm;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-form button.btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  input {
+    width: 99%;
+  }
+
+  textarea {
+    width: 99%;
+  }
+}

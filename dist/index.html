@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ✅ Pridajte bezpečnostné tagy: -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta name="description" content="Ribbon – Produktová stránka" />
+    <title>Ribbon - Jednoduché platby</title>
+    
+    <link rel="icon" href="/favicon.ico" />
+    <script type="module" crossorigin src="/ProductPage/assets/index-350fb0d1.js"></script>
+    <link rel="stylesheet" href="/ProductPage/assets/index-554662ee.css">
+  </head>
+  <body>
+    <nav class="main-menu" role="navigation" aria-label="Hlavná navigácia">
+      <a href="#hero" class="menu-logo" id="ribbon-logo">
+        <span>R</span><span>i</span><span>b</span><span>b</span><span>o</span
+        ><span>n</span>
+      </a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        &#9776;
+      </button>
+      <ul role="menubar">
+        <li role="none">
+          <a href="#features" role="menuitem">Prečo Ribbon?</a>
+        </li>
+        <li role="none"><a href="#firms" role="menuitem">Pre koho?</a></li>
+        <li role="none">
+          <a href="#pricing" role="menuitem">Platobné metódy</a>
+        </li>
+        <li role="none"><a href="#contact" role="menuitem">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero sekcia -->
+    <section class="hero" id="hero" role="banner">
+      <div class="container">
+        <h1 class="ribbon-title">
+          <span>R</span><span>i</span><span>b</span><span>b</span><span>o</span
+          ><span>n</span>
+        </h1>
+        <p>Jednoduché online platby pre tvoje podnikanie</p>
+        <a href="#getting-started" class="btn">Začať zadarmo</a>
+      </div>
+    </section>
+
+    <!-- Služby v kartách -->
+    <section class="section" id="features" role="main">
+      <div class="container">
+        <h2>Prečo Ribbon?</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Jednoduchá integrácia</h3>
+            <ul class="highlight-animate">
+              <li>Rýchle napojenie cez API</li>
+              <li>Predpripravené formuláre</li>
+              <li>SDK pre populárne jazyky</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Bezpečné platby</h3>
+            <ul class="highlight-animate">
+              <li>PCI DSS certifikácia</li>
+              <li>Šifrovanie všetkých dát</li>
+              <li>AI ochrana pred podvodmi</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Globálna podpora</h3>
+            <ul class="highlight-animate">
+              <li>135+ podporovaných mien</li>
+              <li>50+ krajín</li>
+              <li>Lokálne platobné metódy</li>
+            </ul>
+          </div>
+        </div>
+        <!-- DOPLNENÁ TABUĽKA -->
+        <div class="firms-table" id="firms">
+          <h3>Pre koho je Ribbon?</h3>
+          <table role="table">
+            <thead>
+              <tr>
+                <th scope="col">Typ firmy</th>
+                <th scope="col">Ako Ribbon pomáha</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>E-shop</td>
+                <td>Prijímanie platieb kartou, Apple Pay, fakturácia</td>
+              </tr>
+              <tr>
+                <td>SaaS startup</td>
+                <td>Predplatné, automatická fakturácia, správa zákazníkov</td>
+              </tr>
+              <tr>
+                <td>Marketplace</td>
+                <td>Rozdelenie platieb medzi predajcov, výplaty</td>
+              </tr>
+              <tr>
+                <td>Mobilná aplikácia</td>
+                <td>Platby cez API, integrácia do aplikácie</td>
+              </tr>
+              <tr>
+                <td>Neziskovka</td>
+                <td>Prijímanie darov, opakované príspevky</td>
+              </tr>
+              <tr>
+                <td>Online služby</td>
+                <td>Rýchle platby za konzultácie, rezervácie</td>
+              </tr>
+              <tr>
+                <td>Vzdelávacie portály</td>
+                <td>Predplatné kurzov, platby za certifikáty</td>
+              </tr>
+              <tr>
+                <td>Eventy</td>
+                <td>Predaj vstupeniek, správa účastníkov, refundácie</td>
+              </tr>
+              <tr>
+                <td>Freelanceri</td>
+                <td>Fakturácia klientom, opakované platby, reporting</td>
+              </tr>
+              <tr>
+                <td>Fyzické prevádzky</td>
+                <td>QR platby, mobilné terminály, prehľad tržieb</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platobné metódy v kartách -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <h2>Platobné metódy</h2>
+        <div class="cards-grid">
+          <div class="card card-bg-visa">
+            <h3>Kartové platby</h3>
+            <ul>
+              <li>Visa, Mastercard, AMEX</li>
+              <li>Jednorazové platby</li>
+              <li>Opakované platby</li>
+            </ul>
+          </div>
+          <div class="card card-bg-mobile">
+            <h3>Mobilné platby</h3>
+            <ul>
+              <li>Apple Pay</li>
+              <li>Google Pay</li>
+              <li>QR kód platby</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Start kroky -->
+    <section
+      class="section"
+      id="getting-started"
+      role="region"
+      aria-labelledby="steps-heading"
+    >
+      <div class="container">
+        <h2 id="steps-heading">Ako začať?</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Vytvor účet</h3>
+            <p>Registrácia za 2 minúty</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Pripoj účet</h3>
+            <p>Bezpečne prepoj banking</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Vyber integráciu</h3>
+            <p>API alebo plugin</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>Testuj</h3>
+            <p>Sandbox prostredie</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <h3>Spusti live</h3>
+            <p>Aktivuj platby</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt sekcia -->
+    <section class="section" id="contact">
+      <div class="container contact-container">
+        <h2>Kontakt</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:info@ribbon.sk">info@ribbon.sk</a>
+            </p>
+            <p>
+              <strong>Telefón:</strong>
+              <a href="tel:+421900123456">+421 900 123 456</a>
+            </p>
+            <p><strong>Adresa:</strong> Príkladná 12, 821 09 Bratislava</p>
+          </div>
+          <form class="contact-form" action="#" method="post">
+            <input
+              type="text"
+              name="name"
+              placeholder="Vaše meno"
+              required
+              aria-label="Vaše meno"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Váš email"
+              required
+              aria-label="Váš email"
+            />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Vaša správa"
+              required
+              aria-label="Vaša správa"
+            ></textarea>
+            <button class="btn" type="submit">Odoslať</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    
+    
+    
+    
+    
+  </body>
+</html>

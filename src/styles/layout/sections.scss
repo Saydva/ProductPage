@@ -1,0 +1,15 @@
+/* Sekcie */
+.section {
+  padding: $spacing-lg $spacing-sm;
+}
+
+section {
+  margin-bottom: $spacing-xl;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #1a202c;
+}

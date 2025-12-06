@@ -1,0 +1,66 @@
+/* Hero sekcia */
+.hero {
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+
+  h1 {
+    color: white;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+  }
+}
+
+.hero h1 {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: ribbonTitleIn 1.2s cubic-bezier(0.4, 0.2, 0.2, 1) forwards;
+  animation-delay: 0.4s;
+  font-size: 3rem;
+  font-weight: 900;
+  color: $primary-color;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-shadow: 0 4px 24px rgba($primary-color, 0.18);
+}
+
+@keyframes ribbonTitleIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.ribbon-title span {
+  opacity: 0;
+  transform: translateY(30px) scaleX(0.7);
+  display: inline-block;
+  transition:
+    opacity 0.4s,
+    transform 0.4s;
+  font-weight: 900;
+  font-size: 3rem;
+  color: $primary-color;
+  letter-spacing: 0.04em;
+  text-shadow: 0 4px 24px rgba($primary-color, 0.18);
+}
+
+.ribbon-title.animated span {
+  opacity: 1;
+  transform: translateY(0) scaleX(1);
+}
+
+.ribbon-title span {
+  transition-delay: 0s;
+}

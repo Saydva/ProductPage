@@ -1,0 +1,120 @@
+@import '../base/variables';
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $spacing-lg;
+  background: rgba($bg-light, 0.25);
+  backdrop-filter: blur(8px);
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 2px 12px rgba($primary-color, 0.07);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 70px;
+
+  .menu-logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $secondary-color;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    span {
+      opacity: 0;
+      transform: translateY(20px) scaleX(0.7);
+      display: inline-block;
+      transition:
+        opacity 0.4s,
+        transform 0.4s;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: $secondary-color;
+      letter-spacing: 1px;
+    }
+
+    &.animated span {
+      opacity: 1;
+      transform: translateY(0) scaleX(1);
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: $spacing-md;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.3s;
+  }
+
+  li a {
+    color: $text-dark; // lepšia čitateľnosť
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition:
+      background 0.2s,
+      color 0.2s;
+    display: block;
+  }
+
+  li a:hover,
+  li a:focus {
+    background: $bg-light;
+    color: $primary-color;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: $text-dark;
+    transition: transform 0.3s ease;
+    padding: 8px;
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba($primary-color, 0.1);
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 850px) {
+    padding: $spacing-sm $spacing-sm;
+    .menu-logo {
+      font-size: 1.2rem;
+    }
+    ul {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: rgba($bg-light, 0.95);
+      flex-direction: column;
+      gap: 0;
+      max-height: 0;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba($primary-color, 0.1);
+      border-radius: 0 0 18px 18px;
+      transition: max-height 0.3s;
+    }
+    ul.open {
+      max-height: 400px;
+      padding: 12px 0;
+    }
+    li a {
+      font-size: 1rem;
+      padding: 12px 24px;
+      border-radius: 0;
+    }
+    .menu-toggle {
+      display: block;
+    }
+  }
+}

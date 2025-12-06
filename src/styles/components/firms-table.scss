@@ -1,0 +1,87 @@
+@import '../base/variables';
+
+.firms-table {
+  margin: $spacing-xl auto 0;
+  max-width: 800px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba($primary-color, 0.1);
+  overflow: hidden;
+  padding: 0 0 $spacing-md 0;
+  backdrop-filter: blur(12px);
+
+  h3 {
+    text-align: center;
+    margin: $spacing-lg 0 $spacing-sm 0;
+    color: #fff; // svetlý nadpis
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: rgba(
+      $secondary-color,
+      0.7
+    ); // jemne fialový podklad pod nadpisom
+    border-radius: 12px;
+    padding: $spacing-sm 0;
+    box-shadow: 0 2px 8px rgba($primary-color, 0.07);
+    display: inline-block;
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1rem;
+    background: linear-gradient(
+      120deg,
+      $primary-color 0%,
+      $secondary-color 60%,
+      $success-color 100%
+    );
+    border: 3px solid $secondary-color; // border okolo celej tabuľky
+    box-shadow: 0 2px 12px rgba($primary-color, 0.12); // jemný tieň
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  th,
+  td {
+    padding: $spacing-sm $spacing-md;
+    text-align: left;
+    font-size: 1rem;
+    color: #fff; // svetlý text v bunkách
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+
+  th {
+    background: rgba($secondary-color, 0.7);
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 2px solid $border-color;
+    letter-spacing: 0.5px;
+  }
+
+  tr {
+    position: relative;
+    transition: box-shadow 0.2s;
+  }
+
+  tbody tr {
+    border-left: 6px solid $secondary-color;
+  }
+
+  tbody tr:hover {
+    background: rgba($secondary-color, 0.3);
+    border-left: 6px solid $success-color;
+  }
+
+  td {
+    border-bottom: 1px solid $border-color;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}

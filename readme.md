@@ -123,5 +123,3 @@ Projekt live: [https://Saydva.github.io/ProductPage/](https://Saydva.github.io/P
 
 ![QR Code](public/qr-code.png)
 _Skenujte QR kód telefónom pre okamžitý prístup._
-
-Thanks.!!

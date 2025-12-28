@@ -1,46 +1,42 @@
-# Ribbon – Simple Online Payments for Your Business
+# Ribbon - Produktová stránka
 
-Ribbon is a modern payment platform for fast, secure, and simple online payments. Whether you're selling online, managing subscriptions, or running a marketplace, Ribbon provides everything you need for efficient transaction processing.
+Ribbon je moderná platobná platforma pre rýchle, bezpečné a jednoduché online platby. Či už predávate online, spravujete predplatné alebo prevádzkujete trhovisko, Ribbon poskytuje všetko potrebné pre efektívne spracovanie transakcií.
 
----
+## Funkcie
 
-## 🌐 Live Demo
+- Responzívny dizajn (mobile-first)
+- Moderné UI/UX
+- Plynulé CSS & JS animácie
+- Interaktívne prvky
+- Architektúra založená na komponentoch
+- Animovaný logotyp
+- Zvýraznenie kariet
+- Animácie pri skrolovaní (desktop/tablet)
+- Kompatibilita medzi prehliadačmi
 
-**Website:** [https://Saydva.github.io/ProductPage/](https://Saydva.github.io/ProductPage/)
+## Použitie
 
-### 📱 QR code for quick access
-
-![QR Code](public/qr-code.png)
-
-_Scan the QR code with your phone for instant access._
-
----
-
-## 🛠️ Technologies Used
-
-- **HTML5** – Semantic markup
-- **SASS/SCSS** – Modular stylesheets (using `@import` for compatibility)
-- **JavaScript (ES6+)** – Modern JS, one `DOMContentLoaded` event per file
-- **Vite** – Fast build tool (`base` set to `/ProductPage/`)
-- **CSS Grid & Flexbox** – Responsive layouts
-- **GitHub Actions & Pages** – Automated deployment
-
----
-
-## 📦 Installation
+### Klonovanie repozitára
 
 ```bash
 git clone https://github.com/Saydva/ProductPage.git
 cd ProductPage
 npm install
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run deploy   # Deploy to GitHub Pages
 ```
 
----
+### Otvorenie projektu
 
-## 📁 Project Structure
+```bash
+npm run dev      # Spustenie vývojového servera
+npm run build    # Zostavenie pre produkciu
+npm run deploy   # Nasadenie na GitHub Pages
+```
+
+## Štruktúra projektu
+
+Projekt používa Vite ako rýchly nástroj na zostavenie, SASS pre modulárne štýly a JavaScript pre interaktivitu. Štruktúra je organizovaná do priečinkov pre štýly, JavaScript a verejné súbory.
+
+### Stromová štruktúra
 
 ```
 ProductPage/
@@ -81,47 +77,49 @@ ProductPage/
 ├── package.json
 ├── package-lock.json
 ├── .gitignore
-├── .todo
 └── README.md
 ```
 
----
+## Popis technológií a súborov
 
-## 🎨 SCSS Architecture
+### HTML
 
-- Only `@use` imports (no deprecated `@import`)
-- Variables, mixins, functions modularized
-- Mobile-friendly: steps always visible, no animation on mobile
-- Animations only via parent class
+- index.html: Hlavná stránka s HTML5 sémantickým označením.
 
----
+### CSS
 
-## 🚀 Features
+- SASS/SCSS súbory: Modulárne štýly pomocou @use importov pre kompatibilitu, premenné, mixiny a funkcie sú modulárne.
 
-- Responsive design (mobile-first)
-- Modern UI/UX
-- Smooth CSS & JS animations
-- Interactive elements
-- Component-based architecture
-- Animated logo
-- Card highlights
-- Scroll animations (desktop/tablet)
-- Cross-browser compatibility
+### JavaScript
 
----
+- ES6+ JavaScript súbory: Moderný JS s jedným DOMContentLoaded eventom na súbor pre animácie a interaktivitu.
 
-## 🚀 Deployment
+### Obrázky
 
-Automatic deploy to GitHub Pages via GitHub Actions  
-**Live URL:** [https://Saydva.github.io/ProductPage/](https://Saydva.github.io/ProductPage/)
+- public/qr-code.png: QR kód pre rýchly prístup k stránke.
 
----
+### Ostatné
 
-## 📱 Mobile-friendly steps
+- vite.config.js: Konfigurácia Vite s nastaveným base na /ProductPage/.
+- package.json: Závislosti a skripty projektu.
+- .gitignore: Súbory ignorované v Git.
 
-On small screens, the "Getting Started" steps section is always visible and transforms into a swipeable slider for better usability.  
-Animácie sa na mobile nevykonávajú, kroky sú vždy viditeľné.
+## Ako projekt funguje
 
----
+Projekt je produktová stránka pre Ribbon, ktorá demonštruje moderné webové vývojové praktiky. Používa responzívny dizajn, plynulé animácie a interaktívne prvky. Na malých obrazovkách sú kroky vždy viditeľné a menia sa na posúvateľný slider pre lepšiu použiteľnosť. Animácie sa nevykonávajú na mobile.
 
-**This project showcases modern web development practices with maintainable code, responsive design, and optimal user experience.**
+## Ako rozšíriť projekt
+
+- Pridajte nové komponenty do src/styles/components/ a zodpovedajúce štýly.
+- Pridajte novú funkcionalitu do src/js/ s novými JS súbormi.
+- Aktualizujte index.html pre nové sekcie.
+- Použite Vite pre rýchle zostavenie a nasadenie.
+
+## Online verzia
+
+Projekt live: [https://Saydva.github.io/ProductPage/](https://Saydva.github.io/ProductPage/)
+
+### 📱 QR kód pre rýchly prístup
+
+![QR Code](public/qr-code.png)
+_Skenujte QR kód telefónom pre okamžitý prístup._
